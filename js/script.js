@@ -85,21 +85,37 @@
 // console.log(x);
 
 
-Given an array of ones and zeroes, convert the equivalent binary value to an integer.
-Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+// Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
 
 
-function oneZero ( array ){
-  let x = 0;
-  let j = 0;
-  for (let i = array.length - 1; i >= 0 ; i--) {
-    if ( array[i] == 1 ) {
-      x += Math.pow(2,j);
-    }
-    j++;
+// function oneZero ( array ){
+//   let x = 0;
+//   let j = 0;
+//   for (let i = array.length - 1; i >= 0 ; i--) {
+//     if ( array[i] == 1 ) {
+//       x += Math.pow(2,j);
+//     }
+//     j++;
+//   }
+//   return x;
+// }
+// a = [1, 0, 1, 1];
+// console.log(myName(a));
+
+
+Given an array of integers your solution should find the smallest integer.
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    let x = [args[0]];
+    args.forEach((item) => {
+      if ( item < x ) {
+        x.pop();
+        x.push(item);
+      }
+    });
+    return x[0];
   }
-  return x;
 }
-a = [1, 0, 1, 1];
-console.log(myName(a));
 
