@@ -67,20 +67,39 @@
 // console.log(stringToArray("I love arrays they are my favorite"));
 
 
-You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
-You can assume all values in the array are numbers.
+// You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+// You can assume all values in the array are numbers.
 
 
-function smallEnough(a, limit){
-  let result = true;
-  a.forEach((item) => {
-    if ( item > limit) {
-      return result = false;
+// function smallEnough(a, limit){
+//   let result = true;
+//   a.forEach((item) => {
+//     if ( item > limit) {
+//       return result = false;
+//     }
+//   });
+//   return result;
+// }
+
+// x = smallEnough([100,200,300,400], 500);
+// console.log(x);
+
+
+Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+
+function oneZero ( array ){
+  let x = 0;
+  let j = 0;
+  for (let i = array.length - 1; i >= 0 ; i--) {
+    if ( array[i] == 1 ) {
+      x += Math.pow(2,j);
     }
-  });
-  return result;
+    j++;
+  }
+  return x;
 }
-
-x = smallEnough([100,200,300,400], 500);
-console.log(x);
+a = [1, 0, 1, 1];
+console.log(myName(a));
 
