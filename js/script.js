@@ -29,18 +29,31 @@
 // console.log(between(-4, 5));
 
 
-Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
-Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+// Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+// Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
 
-function paperwork(n, m) {
-  let risultato = 0;
-  if ( n < 0 || m < 0){
-    return risultato;
-  } else {
-    risultato = n * m;
-    return risultato;
+// function paperwork(n, m) {
+//   let risultato = 0;
+//   if ( n < 0 || m < 0){
+//     return risultato;
+//   } else {
+//     risultato = n * m;
+//     return risultato;
+//     }
+// }
+//   console.log(paperwork(-3,5));
+
+
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+function fakeBin(x){
+  let y = '';
+  for (var i = 0; i < x.length; i++) {
+    if ( x[i] < 5 ) {
+      y += 0;
+    } else {
+      y += 1;
     }
+  }
+  return y;
 }
-  console.log(paperwork(-3,5));
-
 
