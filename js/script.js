@@ -15,16 +15,32 @@
 // var str = "How can mirrors be real if our eyes aren't real";
 // console.log(str.toJadenCase());
 
-Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+// Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
 
-function between(a, b) {
-  const newArray = [];
-  for (let i = a; i <= b; i++) {
-    newArray.push(i);
-  }
-  return newArray;
+// function between(a, b) {
+//   const newArray = [];
+//   for (let i = a; i <= b; i++) {
+//     newArray.push(i);
+//   }
+//   return newArray;
+// }
+
+
+// console.log(between(-4, 5));
+
+
+Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+function paperwork(n, m) {
+  let risultato = 0;
+  if ( n < 0 || m < 0){
+    return risultato;
+  } else {
+    risultato = n * m;
+    return risultato;
+    }
 }
+  console.log(paperwork(-3,5));
 
-
-console.log(between(-4, 5));
 
