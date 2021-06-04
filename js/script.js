@@ -158,25 +158,41 @@
 //   return x;
 // }
 
-You are given a string of letters and an array of numbers.
-The numbers indicate positions of letters that must be removed, in order, starting from the beginning of the array.
-After each removal the size of the string decreases (there is no empty space).
-Return the only letter left.
+// You are given a string of letters and an array of numbers.
+// The numbers indicate positions of letters that must be removed, in order, starting from the beginning of the array.
+// After each removal the size of the string decreases (there is no empty space).
+// Return the only letter left.
 
-function lastSurvivor(letters, coords) {
-  if (typeof letters === 'string'){
-      var x = letters.split('');;
-      for ( let i = 0; i < letters.length - 1; i++){
-        x.splice(coords[i], 1);
-      }
-    letters = x.join('');
-    console.log(letters);
+// function lastSurvivor(letters, coords) {
+//   if (typeof letters === 'string'){
+//       var x = letters.split('');;
+//       for ( let i = 0; i < letters.length - 1; i++){
+//         x.splice(coords[i], 1);
+//       }
+//     letters = x.join('');
+//     console.log(letters);
 
-    } else {
-      for ( let i = 0; i < letters.length - 1; i++){
-      letters.splice(coords[i], 1);
-      }
-    }
+//     } else {
+//       for ( let i = 0; i < letters.length - 1; i++){
+//       letters.splice(coords[i], 1);
+//       }
+//     }
 
-  return letters
+//   return letters
+// }
+
+
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+Notes:
+
+All numbers are valid Int32, no need to validate them.
+There will always be at least one number in the input string.
+Output string must be two numbers separated by a single space, and highest number is first.
+
+function highAndLow(numbers){
+  var arr = numbers.split(' ');
+  var maxMin = [];
+  maxMin.push(Math.max(...arr));
+  maxMin.push(Math.min(...arr));
+  return maxMin.join(' ');
 }
