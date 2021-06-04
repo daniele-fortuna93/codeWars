@@ -182,17 +182,28 @@
 // }
 
 
-In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
-Notes:
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+// Notes:
 
-All numbers are valid Int32, no need to validate them.
-There will always be at least one number in the input string.
-Output string must be two numbers separated by a single space, and highest number is first.
+// All numbers are valid Int32, no need to validate them.
+// There will always be at least one number in the input string.
+// Output string must be two numbers separated by a single space, and highest number is first.
 
-function highAndLow(numbers){
-  var arr = numbers.split(' ');
-  var maxMin = [];
-  maxMin.push(Math.max(...arr));
-  maxMin.push(Math.min(...arr));
-  return maxMin.join(' ');
+// function highAndLow(numbers){
+//   var arr = numbers.split(' ');
+//   var maxMin = [];
+//   maxMin.push(Math.max(...arr));
+//   maxMin.push(Math.min(...arr));
+//   return maxMin.join(' ');
+// }
+
+You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+function getMiddle(s)
+{
+  if ( s.length % 2 == 0) {
+    return s[(s.length / 2) - 1] + s[s.length / 2];
+  } else {
+    return s[Math.floor(s.length / 2)];
+  }
 }
