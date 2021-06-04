@@ -208,14 +208,29 @@
 //   }
 // }
 
-Simple, given a string of words, return the length of the shortest word(s).
-String will never be empty and you do not need to account for different data types.
+// Simple, given a string of words, return the length of the shortest word(s).
+// String will never be empty and you do not need to account for different data types.
 
-function findShort(s){
-  let arr = s.split(' ');
-  let num = [];
-  for (var i = 0; i < arr.length; i++) {
-    num.push(arr[i].length);
+// function findShort(s){
+//   let arr = s.split(' ');
+//   let num = [];
+//   for (var i = 0; i < arr.length; i++) {
+//     num.push(arr[i].length);
+//   }
+//   return Math.min(...num);
+// }
+
+Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+function XO(str) {
+  let x = 0;
+  let o = 0;
+  for (var i = 0; i < str.length; i++) {
+    if ( str[i] == 'x' || str[i] == 'X') {
+      x++;
+    } else if ( str[i] == 'o' || str[i] == 'O') {
+      o++;
+    }
   }
-  return Math.min(...num);
+  return ( x == o ) ?  true :  false
 }
