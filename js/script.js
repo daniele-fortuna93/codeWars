@@ -248,24 +248,38 @@
 //   return arr;
 // }
 
-Given a sequence of integers, return the sum of all the integers that have an even index, multiplied by the integer at the last index.
-Indices in sequence start from 0.
-If the sequence is empty, you should return 0
+// Given a sequence of integers, return the sum of all the integers that have an even index, multiplied by the integer at the last index.
+// Indices in sequence start from 0.
+// If the sequence is empty, you should return 0
 
-function evenLast(numbers) {
-  if ( numbers.length > 0) {
-    var x = 0;
+// function evenLast(numbers) {
+//   if ( numbers.length > 0) {
+//     var x = 0;
 
-    for (var i = 0; i < numbers.length; i++) {
-      if ( i == 0) {
-        x += numbers[i];
-      } else if ( i % 2 == 0) {
-        x += numbers[i];
-      }
-    }
-    x *= numbers[numbers.length-1];
-    return x;
-  } else {
-    return 0;
-  }
+//     for (var i = 0; i < numbers.length; i++) {
+//       if ( i == 0) {
+//         x += numbers[i];
+//       } else if ( i % 2 == 0) {
+//         x += numbers[i];
+//       }
+//     }
+//     x *= numbers[numbers.length-1];
+//     return x;
+//   } else {
+//     return 0;
+//   }
+// }
+
+This Kata is intended as a small challenge for my students
+All Star Code Challenge #1
+Write a function, called sumPPG, that takes two NBA player objects/struct/Hash/Dict/Class and sums their PPG
+function NBAplayer(name, team, ppg){
+    this.name=name;
+    this.team=team;
+    this.ppg=ppg;
+  } 
+  var iverson = new NBAplayer("Iverson", "76ers", 11.2);
+  var jordan = new NBAplayer("Jordan", "bulls", 20.2);
+function sumPPG(playerOne, playerTwo){
+    return playerOne.ppg + playerTwo.ppg
 }
