@@ -197,13 +197,25 @@
 //   return maxMin.join(' ');
 // }
 
-You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
-function getMiddle(s)
-{
-  if ( s.length % 2 == 0) {
-    return s[(s.length / 2) - 1] + s[s.length / 2];
-  } else {
-    return s[Math.floor(s.length / 2)];
+// function getMiddle(s)
+// {
+//   if ( s.length % 2 == 0) {
+//     return s[(s.length / 2) - 1] + s[s.length / 2];
+//   } else {
+//     return s[Math.floor(s.length / 2)];
+//   }
+// }
+
+Simple, given a string of words, return the length of the shortest word(s).
+String will never be empty and you do not need to account for different data types.
+
+function findShort(s){
+  let arr = s.split(' ');
+  let num = [];
+  for (var i = 0; i < arr.length; i++) {
+    num.push(arr[i].length);
   }
+  return Math.min(...num);
 }
