@@ -136,25 +136,47 @@
 
 // console.log(rentalCarCost(6));
 
-Can we divide it?
+// Can we divide it?
 
-function isDivideBy(number, a, b) {
-  if ( number % a == 0 && number % b == 0) {
-    return true;
-  }
-  return false;
-}
-console.log(isDivideBy(4,2,3));
+// function isDivideBy(number, a, b) {
+//   if ( number % a == 0 && number % b == 0) {
+//     return true;
+//   }
+//   return false;
+// }
+// console.log(isDivideBy(4,2,3));
 
-Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+// Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
 
-function countDevelopers(list) {
-  var x = 0;
-  for (let i=0; i<list.length; i++){
-    if ( list[i]['continent'] == 'Europe' && list[i]['language'] == 'JavaScript'){
-      x += 1;
+// function countDevelopers(list) {
+//   var x = 0;
+//   for (let i=0; i<list.length; i++){
+//     if ( list[i]['continent'] == 'Europe' && list[i]['language'] == 'JavaScript'){
+//       x += 1;
+//     }
+//   }
+//   return x;
+// }
+
+You are given a string of letters and an array of numbers.
+The numbers indicate positions of letters that must be removed, in order, starting from the beginning of the array.
+After each removal the size of the string decreases (there is no empty space).
+Return the only letter left.
+
+function lastSurvivor(letters, coords) {
+  if (typeof letters === 'string'){
+      var x = letters.split('');;
+      for ( let i = 0; i < letters.length - 1; i++){
+        x.splice(coords[i], 1);
+      }
+    letters = x.join('');
+    console.log(letters);
+
+    } else {
+      for ( let i = 0; i < letters.length - 1; i++){
+      letters.splice(coords[i], 1);
+      }
     }
-  }
-  return x;
-}
 
+  return letters
+}
