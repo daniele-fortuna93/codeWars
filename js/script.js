@@ -235,15 +235,37 @@
 //   return ( x == o ) ?  true :  false
 // }
 
-We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
-So given a string "super", we should return a list of [2, 4].
+// We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+// So given a string "super", we should return a list of [2, 4].
 
-function vowelIndices(word){
-  var arr = [];
-  for (var i = 0; i < word.length; i++) {
-    if ( word[i] == 'a' || word[i] == 'A' || word[i] == 'e' || word[i] == 'E' || word[i] == 'i' || word[i] == 'I' || word[i] == 'o' || word[i] == 'O' || word[i] == 'u' || word[i] == 'U' || word[i] == 'y' || word[i] == 'Y') {
-      arr.push(i + 1);
+// function vowelIndices(word){
+//   var arr = [];
+//   for (var i = 0; i < word.length; i++) {
+//     if ( word[i] == 'a' || word[i] == 'A' || word[i] == 'e' || word[i] == 'E' || word[i] == 'i' || word[i] == 'I' || word[i] == 'o' || word[i] == 'O' || word[i] == 'u' || word[i] == 'U' || word[i] == 'y' || word[i] == 'Y') {
+//       arr.push(i + 1);
+//     }
+//   }
+//   return arr;
+// }
+
+Given a sequence of integers, return the sum of all the integers that have an even index, multiplied by the integer at the last index.
+Indices in sequence start from 0.
+If the sequence is empty, you should return 0
+
+function evenLast(numbers) {
+  if ( numbers.length > 0) {
+    var x = 0;
+
+    for (var i = 0; i < numbers.length; i++) {
+      if ( i == 0) {
+        x += numbers[i];
+      } else if ( i % 2 == 0) {
+        x += numbers[i];
+      }
     }
+    x *= numbers[numbers.length-1];
+    return x;
+  } else {
+    return 0;
   }
-  return arr;
 }
