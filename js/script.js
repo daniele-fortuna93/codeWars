@@ -220,17 +220,30 @@
 //   return Math.min(...num);
 // }
 
-Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
 
-function XO(str) {
-  let x = 0;
-  let o = 0;
-  for (var i = 0; i < str.length; i++) {
-    if ( str[i] == 'x' || str[i] == 'X') {
-      x++;
-    } else if ( str[i] == 'o' || str[i] == 'O') {
-      o++;
+// function XO(str) {
+//   let x = 0;
+//   let o = 0;
+//   for (var i = 0; i < str.length; i++) {
+//     if ( str[i] == 'x' || str[i] == 'X') {
+//       x++;
+//     } else if ( str[i] == 'o' || str[i] == 'O') {
+//       o++;
+//     }
+//   }
+//   return ( x == o ) ?  true :  false
+// }
+
+We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+So given a string "super", we should return a list of [2, 4].
+
+function vowelIndices(word){
+  var arr = [];
+  for (var i = 0; i < word.length; i++) {
+    if ( word[i] == 'a' || word[i] == 'A' || word[i] == 'e' || word[i] == 'E' || word[i] == 'i' || word[i] == 'I' || word[i] == 'o' || word[i] == 'O' || word[i] == 'u' || word[i] == 'U' || word[i] == 'y' || word[i] == 'Y') {
+      arr.push(i + 1);
     }
   }
-  return ( x == o ) ?  true :  false
+  return arr;
 }
