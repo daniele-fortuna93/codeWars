@@ -316,16 +316,33 @@
 //     return sum + doubleNum
 // }
 
-convert decimal number to toBinary
-function toBinary(n){
+// convert decimal number to toBinary
+// function toBinary(n){
+//     bin = "";
+//     if ( n == 0){
+//         return 0
+//     }
+// 	while( n !=0 ) {
+// 		rest = n % 2 ; 
+// 		n = ( n - rest ) / 2; 
+// 		bin = rest + bin;
+// 	}	
+// 	return bin;
+//   }
+
+Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+The binary number returned should be a string
+
+function addBinary(a,b) {
+    var sum = a + b;
     bin = "";
-    if ( n == 0){
-        return 0
-    }
-	while( n !=0 ) {
-		rest = n % 2 ; 
-		n = ( n - rest ) / 2; 
-		bin = rest + bin;
-	}	
-	return bin;
+      if ( sum == 0){
+          return 0
+      }
+    while( sum !=0 ) {
+      rest = sum % 2 ; 
+      sum = ( sum - rest ) / 2; 
+      bin = rest + bin;
+    } 
+    return bin;
   }
