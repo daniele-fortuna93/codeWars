@@ -284,15 +284,34 @@
 //     return playerOne.ppg + playerTwo.ppg
 // }
 
-Complete the solution so that the function will break up camel casing, using a space between words.
+// Complete the solution so that the function will break up camel casing, using a space between words.
 
-function solution(string) {
-    string = string.split('');
-    for (let i = 0; i < string.length; i++) {
-        if ( string[i] == string[i].toUpperCase()) {
-            string[i] = ' ' + string[i]; 
+// function solution(string) {
+//     string = string.split('');
+//     for (let i = 0; i < string.length; i++) {
+//         if ( string[i] == string[i].toUpperCase()) {
+//             string[i] = ' ' + string[i]; 
+//         }
+//     }
+//     string = string.join('');
+//  return string
+// }
+
+Find the sum of the digits of all the numbers from 1 to N (both ends included).
+
+function twistedSum(n) {
+    var sum = 0;
+    var doubleNum = 0;
+    for (let i = 0; i <= n; i++) {
+        if ( i < 10 ) {
+            sum += i;
+        } else {
+            i += '';
+            for (let j = 0; j < i.length; j++) {               
+                doubleNum += parseInt(i[j]);
+            }
+            
         }
     }
-    string = string.join('');
- return string
+    return sum + doubleNum
 }
