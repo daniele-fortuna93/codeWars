@@ -297,21 +297,35 @@
 //  return string
 // }
 
-Find the sum of the digits of all the numbers from 1 to N (both ends included).
+// Find the sum of the digits of all the numbers from 1 to N (both ends included).
 
-function twistedSum(n) {
-    var sum = 0;
-    var doubleNum = 0;
-    for (let i = 0; i <= n; i++) {
-        if ( i < 10 ) {
-            sum += i;
-        } else {
-            i += '';
-            for (let j = 0; j < i.length; j++) {               
-                doubleNum += parseInt(i[j]);
-            }
+// function twistedSum(n) {
+//     var sum = 0;
+//     var doubleNum = 0;
+//     for (let i = 0; i <= n; i++) {
+//         if ( i < 10 ) {
+//             sum += i;
+//         } else {
+//             i += '';
+//             for (let j = 0; j < i.length; j++) {               
+//                 doubleNum += parseInt(i[j]);
+//             }
             
-        }
+//         }
+//     }
+//     return sum + doubleNum
+// }
+
+convert decimal number to toBinary
+function toBinary(n){
+    bin = "";
+    if ( n == 0){
+        return 0
     }
-    return sum + doubleNum
-}
+	while( n !=0 ) {
+		rest = n % 2 ; 
+		n = ( n - rest ) / 2; 
+		bin = rest + bin;
+	}	
+	return bin;
+  }
