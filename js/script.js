@@ -350,29 +350,45 @@
 // Write a function that reverses the bits in an integer.
 // For example, the number 417 is 110100001 in binary. Reversing the binary is 100001011 which is 267.
 // You can assume that the number is not negative.
-function reverseBits (n) {
-    let bin = "";
-    let binRev = [];
-        if ( n == 0){
-            return 0
-        }
-        while( n !=0 ) {
-            rest = n % 2 ;
-            n = ( n - rest ) / 2;
-            bin = rest + bin;
-        }
-        bin = bin.split('');
+// function reverseBits (n) {
+//     let bin = "";
+//     let binRev = [];
+//         if ( n == 0){
+//             return 0
+//         }
+//         while( n !=0 ) {
+//             rest = n % 2 ;
+//             n = ( n - rest ) / 2;
+//             bin = rest + bin;
+//         }
+//         bin = bin.split('');
+//
+//     for (let i = 0; i < bin.length; i++) {
+//         binRev.unshift(bin[i]);
+//     }
+//     let result = 0;
+//     let j = 0;
+//     for (let i = binRev.length - 1; i >= 0 ; i--) {
+//       if ( binRev[i] == 1 ) {
+//         result += Math.pow(2,j);
+//       }
+//       j++;
+//     }
+//     return result
+// }
 
-    for (let i = 0; i < bin.length; i++) {
-        binRev.unshift(bin[i]);
+// Given a list of integers, determine whether the sum of its elements is odd or even.
+// Give your answer as a string matching "odd" or "even".
+// If the input array is empty consider it as: [0] (array with a zero).
+
+function oddOrEven(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
     }
-    let result = 0;
-    let j = 0;
-    for (let i = binRev.length - 1; i >= 0 ; i--) {
-      if ( binRev[i] == 1 ) {
-        result += Math.pow(2,j);
-      }
-      j++;
+    if ( sum % 2 == 0) {
+        return 'even'
+    } else {
+        return 'odd'
     }
-    return result
-}
+ }
