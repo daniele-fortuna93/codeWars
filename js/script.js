@@ -1,7 +1,7 @@
 
 // Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
 // Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
- 
+
 // Example:
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
@@ -277,7 +277,7 @@
 //     this.name=name;
 //     this.team=team;
 //     this.ppg=ppg;
-//   } 
+//   }
 //   var iverson = new NBAplayer("Iverson", "76ers", 11.2);
 //   var jordan = new NBAplayer("Jordan", "bulls", 20.2);
 // function sumPPG(playerOne, playerTwo){
@@ -290,7 +290,7 @@
 //     string = string.split('');
 //     for (let i = 0; i < string.length; i++) {
 //         if ( string[i] == string[i].toUpperCase()) {
-//             string[i] = ' ' + string[i]; 
+//             string[i] = ' ' + string[i];
 //         }
 //     }
 //     string = string.join('');
@@ -307,10 +307,10 @@
 //             sum += i;
 //         } else {
 //             i += '';
-//             for (let j = 0; j < i.length; j++) {               
+//             for (let j = 0; j < i.length; j++) {
 //                 doubleNum += parseInt(i[j]);
 //             }
-            
+
 //         }
 //     }
 //     return sum + doubleNum
@@ -323,26 +323,56 @@
 //         return 0
 //     }
 // 	while( n !=0 ) {
-// 		rest = n % 2 ; 
-// 		n = ( n - rest ) / 2; 
+// 		rest = n % 2 ;
+// 		n = ( n - rest ) / 2;
 // 		bin = rest + bin;
-// 	}	
+// 	}
 // 	return bin;
 //   }
 
-Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
-The binary number returned should be a string
+// Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+// The binary number returned should be a string
 
-function addBinary(a,b) {
-    var sum = a + b;
-    bin = "";
-      if ( sum == 0){
-          return 0
+// function addBinary(a,b) {
+//     var sum = a + b;
+//     bin = "";
+//       if ( sum == 0){
+//           return 0
+//       }
+//     while( sum !=0 ) {
+//       rest = sum % 2 ;
+//       sum = ( sum - rest ) / 2;
+//       bin = rest + bin;
+//     }
+//     return bin;
+//   }
+
+// Write a function that reverses the bits in an integer.
+// For example, the number 417 is 110100001 in binary. Reversing the binary is 100001011 which is 267.
+// You can assume that the number is not negative.
+function reverseBits (n) {
+    let bin = "";
+    let binRev = [];
+        if ( n == 0){
+            return 0
+        }
+        while( n !=0 ) {
+            rest = n % 2 ;
+            n = ( n - rest ) / 2;
+            bin = rest + bin;
+        }
+        bin = bin.split('');
+
+    for (let i = 0; i < bin.length; i++) {
+        binRev.unshift(bin[i]);
+    }
+    let result = 0;
+    let j = 0;
+    for (let i = binRev.length - 1; i >= 0 ; i--) {
+      if ( binRev[i] == 1 ) {
+        result += Math.pow(2,j);
       }
-    while( sum !=0 ) {
-      rest = sum % 2 ; 
-      sum = ( sum - rest ) / 2; 
-      bin = rest + bin;
-    } 
-    return bin;
-  }
+      j++;
+    }
+    return result
+}
