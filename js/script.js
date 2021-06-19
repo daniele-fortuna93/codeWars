@@ -404,19 +404,31 @@
 // If it is the case we will return k, if not return -1.
 // Note: n and p will always be given as strictly positive integers.
 
-function digPow(n, p){
-    num = n.toString();
-    let numbers = num.split('');
-    let sum = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        sum += Math.pow(numbers[i], p + i);
-    }
-    let y = Math.pow(n, p);
-    if( sum === y){
-    return p;
-    } else if( sum % n === 0) {
-    return sum / n;
-    }else {
-    return -1
-     }
-}
+// function digPow(n, p){
+//     num = n.toString();
+//     let numbers = num.split('');
+//     let sum = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum += Math.pow(numbers[i], p + i);
+//     }
+//     let y = Math.pow(n, p);
+//     if( sum === y){
+//     return p;
+//     } else if( sum % n === 0) {
+//     return sum / n;
+//     }else {
+//     return -1
+//      }
+// }
+
+
+// You need to write regex that will validate a password to make sure it meets the following criteria:
+// At least six characters long
+// contains a lowercase letter
+// contains an uppercase letter
+// contains a number
+// Valid passwords will only be alphanumeric characters.
+
+function validate(password) {
+    return /(^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])[a-zA-Z0-9]{6,}$)/.test(password);
+  }
