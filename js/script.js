@@ -381,14 +381,42 @@
 // Give your answer as a string matching "odd" or "even".
 // If the input array is empty consider it as: [0] (array with a zero).
 
-function oddOrEven(array) {
+// function oddOrEven(array) {
+//     let sum = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         sum += array[i];
+//     }
+//     if ( sum % 2 == 0) {
+//         return 'even'
+//     } else {
+//         return 'odd'
+//     }
+//  }
+
+// Some numbers have funny properties. For example:
+// 89 --> 8¹ + 9² = 89 * 1
+// 695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
+// 46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
+// Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
+// we want to find a positive integer k, if it exists, such as the sum of the digits of n taken to the successive powers of p is equal to k * n.
+// In other words:
+// Is there an integer k such as : (a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k
+// If it is the case we will return k, if not return -1.
+// Note: n and p will always be given as strictly positive integers.
+
+function digPow(n, p){
+    num = n.toString();
+    let numbers = num.split('');
     let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        sum += array[i];
+    for (let i = 0; i < numbers.length; i++) {
+        sum += Math.pow(numbers[i], p + i);
     }
-    if ( sum % 2 == 0) {
-        return 'even'
-    } else {
-        return 'odd'
-    }
- }
+    let y = Math.pow(n, p);
+    if( sum === y){
+    return p;
+    } else if( sum % n === 0) {
+    return sum / n;
+    }else {
+    return -1
+     }
+}
