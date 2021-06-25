@@ -429,6 +429,25 @@
 // contains a number
 // Valid passwords will only be alphanumeric characters.
 
-function validate(password) {
-    return /(^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])[a-zA-Z0-9]{6,}$)/.test(password);
+// function validate(password) {
+//     return /(^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])[a-zA-Z0-9]{6,}$)/.test(password);
+//   }
+
+
+// Two Joggers
+// 
+var nbrOfLaps = function (x, y) {  
+    var array = [], 
+        Bob = x, 
+        Charles = y;  
+    while (Bob !== Charles) {  
+      
+      (Bob > Charles)? Charles += y : Bob += x;
+      
+    }  
+    array.push(Bob/x); 
+    
+    array.push(Charles/y); 
+    
+    return array;  
   }
