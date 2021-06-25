@@ -31,16 +31,23 @@
 
     // Quarter of the year
 
-    function quarterOf($month) {
+    // function quarterOf($month) {
     
-        if ( $month > 9) {
-          return 4;
-        } else if ( $month > 6) {
-          return 3;
-        } else if ( $month > 3) {
-          return 2;
-        } 
-        return 1;
-      }
+    //     if ( $month > 9) {
+    //       return 4;
+    //     } else if ( $month > 6) {
+    //       return 3;
+    //     } else if ( $month > 3) {
+    //       return 2;
+    //     } 
+    //     return 1;
+    //   }
 
-    ?>
+
+    // Sort Numbers
+
+    function solution($nums) {
+        sort($nums);
+        return $nums;
+    }
+?>
