@@ -436,18 +436,30 @@
 
 // Two Joggers
 // 
-var nbrOfLaps = function (x, y) {  
-    var array = [], 
-        Bob = x, 
-        Charles = y;  
-    while (Bob !== Charles) {  
+// var nbrOfLaps = function (x, y) {  
+//     var array = [], 
+//         Bob = x, 
+//         Charles = y;  
+//     while (Bob !== Charles) {  
       
-      (Bob > Charles)? Charles += y : Bob += x;
+//       (Bob > Charles)? Charles += y : Bob += x;
       
-    }  
-    array.push(Bob/x); 
+//     }  
+//     array.push(Bob/x); 
     
-    array.push(Charles/y); 
+//     array.push(Charles/y); 
     
-    return array;  
-  }
+//     return array;  
+//   }
+
+
+// Given a non-negative integer, return an array / a list of the individual digits in order.
+
+function digitize(n) {
+    n = n.toString().split('');
+    let array = [];
+    for ( let i = 0; i < n.length; i++){
+      array.push(parseInt(n[i]));
+    }
+    return array
+}
