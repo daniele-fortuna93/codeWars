@@ -21,4 +21,12 @@
     //     return str_replace('!', "", $string);
     // }
 
+
+    // Get the mean og an array 
+
+    function get_average($a) {
+        $result = array_sum($a) / count($a);
+        return floor($result);
+    }
+
     ?>

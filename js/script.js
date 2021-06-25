@@ -455,11 +455,11 @@
 
 // Given a non-negative integer, return an array / a list of the individual digits in order.
 
-function digitize(n) {
-    n = n.toString().split('');
-    let array = [];
-    for ( let i = 0; i < n.length; i++){
-      array.push(parseInt(n[i]));
-    }
-    return array
-}
+// function digitize(n) {
+//     n = n.toString().split('');
+//     let array = [];
+//     for ( let i = 0; i < n.length; i++){
+//       array.push(parseInt(n[i]));
+//     }
+//     return array
+// }
