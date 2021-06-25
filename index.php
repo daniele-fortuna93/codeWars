@@ -46,8 +46,25 @@
 
     // Sort Numbers
 
-    function solution($nums) {
-        sort($nums);
-        return $nums;
+    // function solution($nums) {
+    //     sort($nums);
+    //     return $nums;
+    // }
+
+    function adjacentElementsProduct($array) {
+        $max = null;
+        for ($i=0; $i < count($array); $i++) {           
+            if ( !(($i + 1) >= count($array))) {
+                if ( $array[$i] * $array[$i + 1] > $max ) {
+                    $max = $array[$i] * $array[$i + 1];
+                    
+                }
+            } else {
+                return $max;
+            }    
+        }
+        return $max;
     }
+
+    
 ?>
