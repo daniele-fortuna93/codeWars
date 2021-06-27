@@ -51,20 +51,31 @@
     //     return $nums;
     // }
 
-    function adjacentElementsProduct($array) {
-        $max = null;
-        for ($i=0; $i < count($array); $i++) {           
-            if ( !(($i + 1) >= count($array))) {
-                if ( $array[$i] * $array[$i + 1] > $max ) {
-                    $max = $array[$i] * $array[$i + 1];
+    // Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+
+    // function adjacentElementsProduct($array) {
+    //     $max = null;
+    //     for ($i=0; $i < count($array); $i++) {           
+    //         if ( !(($i + 1) >= count($array))) {
+    //             if ( $array[$i] * $array[$i + 1] > $max ) {
+    //                 $max = $array[$i] * $array[$i + 1];
                     
-                }
-            } else {
-                return $max;
-            }    
+    //             }
+    //         } else {
+    //             return $max;
+    //         }    
+    //     }
+    //     return $max;
+    // }
+
+    // Cat and Mouse - Easy Version
+
+    function cat_mouse(string $s): string {
+        if (substr_count( $s, '.') > 3)
+        {
+          return "Escaped!";
         }
-        return $max;
+        return "Caught!";
     }
 
-    
 ?>
