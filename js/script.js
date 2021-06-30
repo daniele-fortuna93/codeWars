@@ -472,13 +472,24 @@
 
 // shorter concat [reverse longer]
 
-function shorter_reverse_longer(a,b){
-    if ( a.length > b.length || a.length == b.length) {
-        var reverseA = a.split('').reverse().join('');       
-        return b + reverseA + b
-    } else {
-        var reverseB = b.split('').reverse().join('');       
-        return a + reverseB + a
+// function shorter_reverse_longer(a,b){
+//     if ( a.length > b.length || a.length == b.length) {
+//         var reverseA = a.split('').reverse().join('');       
+//         return b + reverseA + b
+//     } else {
+//         var reverseB = b.split('').reverse().join('');       
+//         return a + reverseB + a
+//     }
+//     return ""
+// }
+
+// Strange mathematics
+
+function strangeMath(n, k){
+    let arr = [];
+    for (let i = 1; i <= n; i++){
+      arr.push(i)
     }
-    return ""
+    arr.sort();
+    return arr.indexOf(k) + 1
 }
