@@ -485,11 +485,24 @@
 
 // Strange mathematics
 
-function strangeMath(n, k){
-    let arr = [];
-    for (let i = 1; i <= n; i++){
-      arr.push(i)
+// function strangeMath(n, k){
+//     let arr = [];
+//     for (let i = 1; i <= n; i++){
+//       arr.push(i)
+//     }
+//     arr.sort();
+//     return arr.indexOf(k) + 1
+// }
+
+
+// Count by X
+
+function countBy(x, n) {
+    var z = [];
+    result = x;
+    for (let i = 0; i < n; i++){
+        z.push(result);
+        result += x;
     }
-    arr.sort();
-    return arr.indexOf(k) + 1
+    return z;
 }
