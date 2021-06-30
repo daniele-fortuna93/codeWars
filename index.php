@@ -70,12 +70,23 @@
 
     // Cat and Mouse - Easy Version
 
-    function cat_mouse(string $s): string {
-        if (substr_count( $s, '.') > 3)
-        {
-          return "Escaped!";
-        }
-        return "Caught!";
+    // function cat_mouse(string $s): string {
+    //     if (substr_count( $s, '.') > 3)
+    //     {
+    //       return "Escaped!";
+    //     }
+    //     return "Caught!";
+    // }
+    $x = 43278;
+    $y = str_split($x);
+    $len = count($y);
+    var_dump($y);
+    $result =[] ;
+    for ($i=0; $i < $len; $i++) { 
+        $result[] = max($y);
+        var_dump($pos = array_search(max($y), $y));
+        var_dump($y);
+        array_splice($y, $pos);
     }
-
+    var_dump($result);
 ?>

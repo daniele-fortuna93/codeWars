@@ -463,3 +463,22 @@
 //     }
 //     return array
 // }
+
+
+// function stray(numbers) {
+//     return numbers.find((e) => numbers.filter((v) => v===e).length === 1); 
+// } 
+
+
+// shorter concat [reverse longer]
+
+function shorter_reverse_longer(a,b){
+    if ( a.length > b.length || a.length == b.length) {
+        var reverseA = a.split('').reverse().join('');       
+        return b + reverseA + b
+    } else {
+        var reverseB = b.split('').reverse().join('');       
+        return a + reverseB + a
+    }
+    return ""
+}
