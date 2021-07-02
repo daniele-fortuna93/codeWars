@@ -509,6 +509,17 @@
 
 // FIXME: Replace all dots
 
-var replaceDots = function(str) {
-    return str.split('.').join('-');
+// var replaceDots = function(str) {
+//     return str.split('.').join('-');
+//   }
+
+
+// Square(n) Sum
+
+function squareSum(numbers){
+    var result = 0;
+    for( let i = 0; i < numbers.length; i++){
+      result += Math.pow(numbers[i], 2);
+    }
+    return result
   }
