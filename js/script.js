@@ -497,12 +497,18 @@
 
 // Count by X
 
-function countBy(x, n) {
-    var z = [];
-    result = x;
-    for (let i = 0; i < n; i++){
-        z.push(result);
-        result += x;
-    }
-    return z;
-}
+// function countBy(x, n) {
+//     var z = [];
+//     result = x;
+//     for (let i = 0; i < n; i++){
+//         z.push(result);
+//         result += x;
+//     }
+//     return z;
+// }
+
+// FIXME: Replace all dots
+
+var replaceDots = function(str) {
+    return str.split('.').join('-');
+  }
