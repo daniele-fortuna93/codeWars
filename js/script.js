@@ -516,10 +516,23 @@
 
 // Square(n) Sum
 
-function squareSum(numbers){
-    var result = 0;
-    for( let i = 0; i < numbers.length; i++){
-      result += Math.pow(numbers[i], 2);
+// function squareSum(numbers){
+//     var result = 0;
+//     for( let i = 0; i < numbers.length; i++){
+//       result += Math.pow(numbers[i], 2);
+//     }
+//     return result
+//   }
+
+// Growth of a Population
+
+function nbYear(p0, percent, aug, p) {
+    var perc = percent / 100,
+    years = 0,
+    totalP = p0;
+    while ( totalP < p) {
+        totalP += ( totalP * perc ) + aug;
+        years++;
     }
-    return result
-  }
+    return years;
+}
