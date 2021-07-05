@@ -547,12 +547,28 @@
 
 // Count the divisors of a number
 
-function getDivisorsCnt(n){
-    var result = 0;
-    for (let i = 0; i <= n; i++) {
-        if ( n % i == 0) {
-            result++;
+// function getDivisorsCnt(n){
+//     var result = 0;
+//     for (let i = 0; i <= n; i++) {
+//         if ( n % i == 0) {
+//             result++;
+//         }
+//     }
+//     return result
+// }
+
+// Sum - Square Even, Root Odd
+
+const sumSquareEvenRootOdd = ns => {
+    var arr = [];
+    for (let i = 0; i < ns.length; i++) {
+        if ( ns[i] % 2 == 0) {
+            arr.push(ns[i] * ns[i]);
+        } else {
+            arr.push(Math.sqrt(ns[i]));
         }
     }
-    return result
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    var sum = arr.reduce(reducer);
+    return parseFloat(sum.toFixed(2));
 }
