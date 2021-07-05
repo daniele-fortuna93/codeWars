@@ -526,13 +526,21 @@
 
 // Growth of a Population
 
-function nbYear(p0, percent, aug, p) {
-    var perc = percent / 100,
-    years = 0,
-    totalP = p0;
-    while ( totalP < p) {
-        totalP += ( totalP * perc ) + aug;
-        years++;
-    }
-    return years;
+// function nbYear(p0, percent, aug, p) {
+//     var perc = percent / 100,
+//     years = 0,
+//     totalP = p0;
+//     while ( totalP < p) {
+//         totalP += ( totalP * perc ) + aug;
+//         years++;
+//     }
+//     return years;
+// }
+
+// Filter Long Words
+
+function filterLongWords(sentence, n) {
+    var arr = sentence.split(' ');
+    const result = arr.filter(word => word.length > n);
+    return result;
 }
