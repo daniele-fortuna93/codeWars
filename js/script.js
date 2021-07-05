@@ -539,8 +539,20 @@
 
 // Filter Long Words
 
-function filterLongWords(sentence, n) {
-    var arr = sentence.split(' ');
-    const result = arr.filter(word => word.length > n);
-    return result;
+// function filterLongWords(sentence, n) {
+//     var arr = sentence.split(' ');
+//     const result = arr.filter(word => word.length > n);
+//     return result;
+// }
+
+// Count the divisors of a number
+
+function getDivisorsCnt(n){
+    var result = 0;
+    for (let i = 0; i <= n; i++) {
+        if ( n % i == 0) {
+            result++;
+        }
+    }
+    return result
 }
