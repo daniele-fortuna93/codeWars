@@ -575,7 +575,12 @@
 
 // getNames()
 
-function getNames(data){
-    return data.map( (item) => item.name);
-}
+// function getNames(data){
+//     return data.map( (item) => item.name);
+// }
 
+// JavaScript Array Filter
+
+function getEvenNumbers(numbersArray){
+    return numbersArray.filter( (number) => number % 2 == 0);
+}
