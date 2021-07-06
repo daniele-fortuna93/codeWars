@@ -559,16 +559,23 @@
 
 // Sum - Square Even, Root Odd
 
-const sumSquareEvenRootOdd = ns => {
-    var arr = [];
-    for (let i = 0; i < ns.length; i++) {
-        if ( ns[i] % 2 == 0) {
-            arr.push(ns[i] * ns[i]);
-        } else {
-            arr.push(Math.sqrt(ns[i]));
-        }
-    }
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    var sum = arr.reduce(reducer);
-    return parseFloat(sum.toFixed(2));
+// const sumSquareEvenRootOdd = ns => {
+//     var arr = [];
+//     for (let i = 0; i < ns.length; i++) {
+//         if ( ns[i] % 2 == 0) {
+//             arr.push(ns[i] * ns[i]);
+//         } else {
+//             arr.push(Math.sqrt(ns[i]));
+//         }
+//     }
+//     const reducer = (accumulator, currentValue) => accumulator + currentValue;
+//     var sum = arr.reduce(reducer);
+//     return parseFloat(sum.toFixed(2));
+// }
+
+// getNames()
+
+function getNames(data){
+    return data.map( (item) => item.name);
 }
+
