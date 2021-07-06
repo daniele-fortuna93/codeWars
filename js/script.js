@@ -581,6 +581,12 @@
 
 // JavaScript Array Filter
 
-function getEvenNumbers(numbersArray){
-    return numbersArray.filter( (number) => number % 2 == 0);
+// function getEvenNumbers(numbersArray){
+//     return numbersArray.filter( (number) => number % 2 == 0);
+// }
+
+// Two Oldest Ages
+
+function twoOldestAges(ages){
+    return ages.sort(function(a,b){return a - b;}).slice(-2);
 }
